@@ -1,0 +1,33 @@
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#playersList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
