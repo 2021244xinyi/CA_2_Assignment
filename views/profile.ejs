@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <header>
+      <a href="/game">Play game</a>
+      <a href="/logout">Logout</a>
+      <a href="/profile">Profile</a>
+    </header>    
+    <div class="container">
+      <h1>Profile</h1>
+      <div class="profile-info">
+        <p>Name</p>
+        <p><%= player.name %></p>
+        <p>Username</p>
+        <p><%= player.username %></p>
+        <p>Games won</p>
+        <p><%= player.wins %></p>
+        <p>Games lost</p>
+        <p><%= player.losses %></p>
+        <p>Games drawn</p>
+        <p><%= player.draws %></p>
+      </div>
+    </div>
+  </body>
+</html>

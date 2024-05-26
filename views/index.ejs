@@ -1,8 +1,30 @@
 <html>
-  <%- include("partials/head.ejs") %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Homepage</title>
+  </head>
   <body>
-    <%- include("partials/header.ejs") %>
-    <h1>Welcome to the Monster Mayhem!</h1>
-    <a href="/game">Play Game</a>
+    <header>
+      <a href="/game">Play game</a>
+      <a href="/logout">Logout</a>
+      <a href="/profile">Profile</a>
+    </header>    
+    <div
+      class="container"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      ">
+      <h1 style="margin-bottom: 0">Monster Mayhem!</h1>
+      <p>
+        Monster mayhem is a multiplayer game. Click the button below to start
+        playing!
+      </p>
+      <a href="/game" class="button1">Start</a>
+    </div>
   </body>
 </html>

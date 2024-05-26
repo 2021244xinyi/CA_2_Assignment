@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include("partials/head.ejs") %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Login</title>
+  </head>
   <body>
-    <h1>Login</h1>
-    <% if (errorMessage) { %>
-    <p class="error"><%= errorMessage %></p>
-    <% } %>
-    <form action="/login" method="post">
-      <label for="username">Username:</label>
-      <input type="text" name="username" />
-      <label for="password">Password:</label>
-      <input type="password" name="password" />
-      <input type="submit" />
-    </form>
-    <p>New to Game? <a href="/register">Register</a></p>
+    <section class="accSection">
+      <h1>Login to Continue</h1>
+      <% if (errorMessage) { %>
+      <p class="error"><%= errorMessage %></p>
+      <% } %>
+      <form action="/login" method="post">
+        <div class="form-input">
+          <label for="username">Username:</label>
+          <input type="text" name="username" />
+        </div>
+        <div class="form-input">
+          <label for="password">Password:</label>
+          <input type="password" name="password" />
+        </div>
+        <button type="submit" class="button1">Login</button>
+      </form>
+    </section>
+    <section class="accSection">
+      <h1>OR</h1>
+    </section>
+    <section class="accSection">
+      <h1>Register</h1>
+      <% if (errorMessage) { %>
+      <p class="error"><%= errorMessage %></p>
+      <% } %>
+      <form method="post" action="/register">
+        <div class="form-input">
+          <label for="name">Name:</label>
+          <input type="text" name="name" />
+        </div>
+        <div class="form-input">
+          <label for="username">Username:</label>
+          <input type="text" name="username" />
+        </div>
+        <div class="form-input">
+          <label for="password">Password:</label>
+          <input type="password" name="password" />
+        </div>
+        <button type="submit" class="button2">Register</button>
+      </form>
+    </section>
   </body>
 </html>

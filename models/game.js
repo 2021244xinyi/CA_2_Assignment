@@ -6,7 +6,11 @@ const MonsterSchema = new Schema({
     type: String,
     required: true,
   },
-  player: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  player: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Player",
+    required: true,
+  },
 });
 
 const CellSchema = new Schema({
@@ -15,10 +19,10 @@ const CellSchema = new Schema({
 
 const GameSchema = new Schema(
   {
-    players: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+    players: [{ type: mongoose.Schema.Types.ObjectId, ref: "Player" }],
     grid: [[{ type: CellSchema, default: {} }]],
     status: { type: String, default: "ongoing" },
-    turn: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    turn: { type: mongoose.Schema.Types.ObjectId, ref: "Player" },
   },
   { timestamps: true }
 );
